@@ -1,0 +1,207 @@
+/* HaoCam.css */
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Thanh quay về */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 18px 30px; /* 12/20 x 1.5 */
+}
+
+.top-bar a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px; /* 16 x 1.5 */
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    aspect-ratio: 1880 / 700;
+    background-image: url("./CBTT01.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("./CBTT02.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 0; /* 40 x 1.5 */
+}
+
+/* Grid 3x3 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr)); /* 360 x 1.5 */
+    gap: 42px; /* 28 x 1.5 */
+    width: 92%;
+    max-width: 1500px;
+}
+
+/* Ô lớn */
+.cell {
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.85), rgba(0, 0, 0, 0.85));
+    border-radius: 24px; /* 16 x 1.5 */
+    padding: 27px; /* 18 x 1.5 */
+    box-shadow: 0 15px 37.5px rgba(0,0,0,0.6); /* 10/25 x 1.5 */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cell:hover {
+    transform: translateY(-6px); /* 4 x 1.5 */
+    box-shadow: 0 27px 52.5px rgba(0,0,0,0.8); /* 18/35 x 1.5 */
+}
+
+/* Hàng 1 - Tướng */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 21px; /* 14 x 1.5 */
+    flex-wrap: wrap;
+    padding-bottom: 9px; /* 6 x 1.5 */
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-item {
+    width: 117px; /* 78 x 1.5 */
+}
+
+.hero-item img {
+    height: 117px; /* 78 x 1.5 */
+    background: rgba(255,255,255,0.08);
+}
+
+.hero-name {
+    font-size: 18px; /* 12 x 1.5 */
+}
+
+/* Hàng 2 & 3 */
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px; /* 8 x 1.5 */
+}
+
+/* Đồ ăn */
+.food {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px; /* 8 x 1.5 */
+    padding: 9px; /* 6 x 1.5 */
+    text-align: center;
+    font-size: 19.5px; /* 13 x 1.5 */
+}
+
+.food:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.2);
+}
+
+.food img {
+    width: 100%;
+    height: 105px; /* 70 x 1.5 */
+    object-fit: contain;
+    border-radius: 9px; /* 6 x 1.5 */
+    margin-bottom: 6px; /* 4 x 1.5 */
+}
+
+/* Chữ tĩnh (hàng 3) */
+.text-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px; /* 8 x 1.5 */
+    padding: 15px 7.5px; /* 10/5 x 1.5 */
+    text-align: center;
+    font-size: 19.5px; /* 13 x 1.5 */
+}
+
+.split {
+    white-space: pre-line;
+}
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 768px) {
+    .banner {
+        aspect-ratio: auto;
+        height: 270px; /* 180 x 1.5 */
+        background-size: cover;
+    }
+
+    .content {
+        background-size: cover;
+        background-position: center top;
+        padding: 30px 0; /* 20 x 1.5 */
+    }
+
+    .grid {
+        gap: 24px; /* 16 x 1.5 */
+    }
+
+    .cell {
+        padding: 18px; /* 12 x 1.5 */
+    }
+
+    .hero-item {
+        width: 90px; /* 60 x 1.5 */
+    }
+
+    .hero-item img {
+        height: 90px; /* 60 x 1.5 */
+    }
+
+    .hero-name {
+        font-size: 15px; /* 10 x 1.5 */
+    }
+
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px; /* 6 x 1.5 */
+    }
+
+    .food {
+        font-size: 16.5px; /* 11 x 1.5 */
+        padding: 6px; /* 4 x 1.5 */
+    }
+
+    .food img {
+        height: 75px; /* 50 x 1.5 */
+    }
+
+    .text-item {
+        font-size: 16.5px; /* 11 x 1.5 */
+        padding: 9px 6px; /* 6/4 x 1.5 */
+    }
+
+    .top-bar {
+        padding: 12px 18px; /* 8/12 x 1.5 */
+    }
+
+    .top-bar a {
+        font-size: 21px; /* 14 x 1.5 */
+    }
+}

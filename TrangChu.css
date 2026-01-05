@@ -1,37 +1,168 @@
-.TrangChu p{
-    line-height: 500px;
-    text-align: center;
-    font-size: 100px;
-    color: red;
-}
-.TrangChu{
-    background-image: url(./TrangChu.jpg);
-    background-size: cover;
-    background-position: center;
-}  
-.TraCuu h1{
-    text-align: center;
-    font-size: 50px;
-}
-table{
-    padding: 0px 0px 0px 380px;
-    line-height: 20px;
-    margin-top: 20px;
-}
-@media (max-width: 768px) {
-    .TrangChu p {
-        font-size: 18px;
-    }
-    .TraCuu h1 {
-        font-size: 20px;
-    }
-    table {
-        padding: 0 ;
-        line-height: 1px;
-    }
-    table img {
-        width: 100%;
-        height: 60px;
-    }
+/* TrangChu.css */
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
 }
 
+/* Banner đầu trang - 1880 x 700 */
+.banner {
+    width: 100%;
+    aspect-ratio: 1880 / 700;
+    background-image: url("./CBTT01.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+}
+
+/* Phần thân - 1400 x 700 */
+.content {
+    width: 100%;
+    aspect-ratio: 1400 / 700;
+    background-image: url("./CBTT02.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    gap: 45px; /* 30 x 1.5 */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px 45px; /* 20/30 x 1.5 */
+    border-radius: 18px; /* 12 x 1.5 */
+}
+
+.menu a {
+    color: #7fffd4;
+    text-decoration: none;
+    font-size: 33px; /* 22 x 1.5 */
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    padding: 21px 36px; /* 14/24 x 1.5 */
+    border-radius: 15px; /* 10 x 1.5 */
+
+    background: linear-gradient(
+        180deg,
+        rgba(127,255,212,0.18),
+        rgba(127,255,212,0.05)
+    );
+
+    border: 1px solid rgba(127,255,212,0.5);
+
+    text-shadow:
+        0 0 4px rgba(127,255,212,0.8),
+        0 0 10px rgba(0,0,0,0.8);
+
+    transition: all 0.25s ease;
+}
+
+.menu a:hover {
+    background: rgba(127,255,212,0.9);
+    color: #000;
+    box-shadow:
+        0 0 12px rgba(127,255,212,0.9),
+        0 0 25px rgba(127,255,212,0.6);
+}
+
+/* Social top-left */
+.social-bar {
+    position: fixed;
+    top: 30px; /* 20 x 1.5 */
+    left: 30px; /* 20 x 1.5 */
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 10 x 1.5 */
+}
+
+.social-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px; /* 12 x 1.5 */
+
+    padding: 12px 21px; /* 8/14 x 1.5 */
+    border-radius: 18px; /* 12 x 1.5 */
+
+    background: rgba(0,0,0,0.65);
+    color: #eafff8;
+    text-decoration: none;
+
+    font-size: 19.5px; /* 13 x 1.5 */
+    line-height: 1;
+    white-space: nowrap;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-item span {
+    white-space: nowrap;
+}
+
+.social-item img {
+    width: 36px; /* 24 x 1.5 */
+    height: 36px; /* 24 x 1.5 */
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.social-item:hover {
+    transform: translateX(6px); /* 4 x 1.5 */
+    box-shadow: 0 0 21px rgba(127,255,212,0.8); /* 14 x 1.5 */
+}
+
+/* --- Responsive cho màn hình nhỏ --- */
+@media (max-width: 768px) {
+    .banner {
+        aspect-ratio: auto;
+        height: 300px; /* 200 x 1.5 */
+        background-size: cover;
+    }
+
+    .content {
+        aspect-ratio: auto;
+        height: 450px; /* 300 x 1.5 */
+        background-size: cover;
+        padding: 15px; /* 10 x 1.5 */
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 22.5px; /* 15 x 1.5 */
+        padding: 15px 22.5px; /* 10/15 x 1.5 */
+        font-size: 27px; /* 18 x 1.5 */
+    }
+
+    .menu a {
+        font-size: 27px; /* 18 x 1.5 */
+        padding: 15px 27px; /* 10/18 x 1.5 */
+    }
+
+    .social-bar {
+        top: 15px; /* 10 x 1.5 */
+        left: 15px; /* 10 x 1.5 */
+        gap: 12px; /* 8 x 1.5 */
+    }
+
+    .social-item {
+        padding: 9px 15px; /* 6/10 x 1.5 */
+        font-size: 18px; /* 12 x 1.5 */
+        gap: 12px; /* 8 x 1.5 */
+    }
+
+    .social-item img {
+        width: 30px; /* 20 x 1.5 */
+        height: 30px; /* 20 x 1.5 */
+    }
+}

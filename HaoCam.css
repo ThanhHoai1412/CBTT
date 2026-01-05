@@ -40,20 +40,16 @@ body {
 }
 
 /* Content */
+/* Phần thân - chỉ nền trắng, không ảnh */
 .content {
     width: 100%;
-    min-height: 100vh;
-    background-image: url("./CBTT02.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #000;
-    background-attachment: fixed;
+    aspect-ratio: 1400 / 700;  /* giữ tỉ lệ nếu muốn */
+    background-color: #fff;    /* nền trắng */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 60px 0; /* 40 x 1.5 */
+    align-items: center;
 }
+
 
 /* Grid 3x3 */
 .grid {
@@ -153,9 +149,8 @@ body {
     }
 
     .content {
-        background-size: cover;
-        background-position: center top;
-        padding: 30px 0; /* 20 x 1.5 */
+        height: 450px; /* tuỳ chỉnh */
+        padding: 15px;
     }
 
     .grid {
